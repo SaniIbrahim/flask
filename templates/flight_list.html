@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+
+{%block content%}
+{%for flight in fligths%}
+<h3>from {{flight.origin}}to{{flight.destination}} is {{flight.duration}}minutes
+{%endfor%}
+</h3>
+<form action="flights" method="POST">
+<input type="text" name="origin">
+<input type="text" name="destination">
+<input type="text" name="duration">
+<button type="submit">Submit<button>
+</form>
+{%endblock content%}
